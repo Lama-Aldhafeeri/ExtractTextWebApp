@@ -1,7 +1,7 @@
 import io
 import openai
 # replace YOUR_API_KEY with your actual API key for the ChatGPT service
-openai.api_key = "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"
+openai.api_key = "My Key"
 text = "What is OOPs? It stands for Object - Oriented Programming. It is based on objects It follows Bottom - up programming approach. It is based on real world. It provides data hiding so it is very secure. It provides reusability feature. What is a clas s? It is a user defined data type that act as a template for creating objects of the identical type. A large number of objects can be created using the same class. Theref ore, Class is considered as the blueprint for the object. What is an object? An object is a real world entity which have properties and functionalities. Object is also called an instance of class. Objects take some space in memory. For eg . Fruit is cl ass and its object s are mango ,apple , banana Furniture is class and its objects are table , chair , desk What is the difference between a class and an object? Class Object 1. It is a collection of objects. It is an instance of a class. 2. It doe sn't take up space in memory. It takes space in memory. 3. Class does not exist physically Object exist physically. 4. Classes are declared just once Objects can be declared as and when required "
 
 def summarize_text(text):
