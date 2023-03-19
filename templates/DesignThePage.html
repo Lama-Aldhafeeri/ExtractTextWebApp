@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Extract Text From PDF</title>
+    <link href="staticFiles\styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+<header class="intro">
+    <h1>اختبر نفسك </h1>
+    <form action="" method="post" enctype="multipart/form-data" name="form">
+          <input type="file" name="file" id="Upload-btn" onChange="progress()" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" hidden />
+          <div class="Upload">
+              <div class="upload-area">
+                  <label for="Upload-btn">
+                      <span id="icon"class='fas fa-cloud-upload-alt'></span>
+                      <p> {{ _('Upload Your File') }} </p>
+                  </label>
+              </div>
+          </div>
+          <br>
+          <div id="progress-div">
+          <progress id="progress-bar" max=100 value=0></progress><br>
+          <b id="loading"></b>
+          </div>
+
+<!--
+          <p> {{ _('In which language your file is written?') }}</p>
+        <br><br>
+          <input type="radio" id="English" name="Language_chosen" value="English" checked>
+          <label for="English"> {{ _('English') }} </label>
+        <br><br>
+          <input type="radio" id="Arabic" name="Language_chosen" value="Arabic">
+          <label for="Arabic"> {{ _('Arabic') }} </label><br><br><br> -->
+        <br><br>
+          <button class="button">
+             <span class="front">
+                  {{ _('Submit') }}
+             </span>
+          </button>
+          <br>
+          <span id="file-chosen">{{variable}}</span>
+    </form>
+</header>
+</body>
+</html>
+<script>
+  var progressDiv = document.getElementById("progress-div");
+  progressDiv.style.display= "none";
+  function progress()
+  {
+  if(document.getElementById("Upload-btn")!=''){
+  progressDiv.style.display= "block";
+  var progress = document.getElementById("progress-bar").value;
+ const loading = document.getElementById("loading");
+
+ const fakeUploadPercentage = [0, 10, 25, 40, 42, 60, 70, 75, 90, 100];
+   let i = 0;
+
+   const interval = setInterval(() => {
+     document.getElementById("progress-bar").value = fakeUploadPercentage[i] ;
+     loading.innerHTML = fakeUploadPercentage[i] + "%";
+     i++;
+     console.log(i);
+     if (i == fakeUploadPercentage.length) {
+       clearInterval(interval);
+       loading.innerHTML = "Completed";
+     }
+   }, 100);
+
+  }}
+</script>

@@ -57,7 +57,7 @@ def final_result(text):
     array_generated_exams = generated_exams.split('\n')
     return array_generated_exams
 
-
+print(final_result(text))
 
 
 

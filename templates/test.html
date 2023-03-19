@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+  <input id="choix_formule1_lpd_1" name="choix_formule1" type="radio" checked="checked" value="lpd@@1@@Chambre Double@@20@@DBL@@1524902140" onclick="slectform('1','lpd','1','1')">
+  <input type="submit" value="sumit">
+</form>
+</body>
+</html>
+<script>
+    radio_btn = driver.find_element_by_id('choix_formule1_lpd_1')
+checked_att = radio_btn.get_attribute("checked")
+if("checked" in checked_att):
+    print("radio button found checked")
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display the text</title>
+<link href="staticFiles\styles.css" rel="stylesheet">
+</head>
+<body>
+<header class="intro">
+    <h1> {{ _('Your Text Is Ready!') }} </h1>
+    <br>  <br>
+       <textarea  id="text" name="text" >
+          {{ variable }}
+       </textarea>
+        <br>  <br>
+       <button class="button" , onclick="myFunction()">
+             <span class="front">
+                  {{ _('Copy') }}
+             </span>
+       </button>
+    <br><br>
+    <p> {{ _('Is That What You Are Looking For?') }} <br> {{ _('If Not, Make Sure You Chosen The Right Language Of Your PDF') }}</p>
+    <br><br><br>
+
+
+</header>
+</body>
+</html>
+<script>
+    function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("text");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+   // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+
+}
+</script>
