@@ -11,7 +11,7 @@ from ArabicOcr import arabicocr
 from numba import jit, cuda
 from pdf2image import convert_from_path
 import PyPDF4
-from lama_chat import *
+from prompt import *
 
 app = Flask(__name__, template_folder='templates', static_folder='staticFiles')
 app.config['UPLOAD_FOLDER'] = 'files/'
