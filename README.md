@@ -1,3 +1,3 @@
 Hackthon ChatGPT
  
-presentation Link https://www.figma.com/file/cRiUyNgo8tqUrI7B4TvXrj/Hackthon?node-id=14%3A23&t=3Za6QpvOdhD4fxRo-1
+Web application helps students to study by using AI that generate exams to let students test themselves upon on their subjects and then give them feedback of their weakness and strength.
